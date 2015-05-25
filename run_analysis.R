@@ -1,3 +1,4 @@
+library(dplyr)
 #1.Merge DataSets
 features <- read.table("./UCI HAR Dataset/features.txt")
 colNames <- features[,2]
@@ -6,7 +7,7 @@ trainingXSet <- read.table("./UCI HAR Dataset/train/X_train.txt")
 names(trainingXSet) <- colNames
 trainingYSet <- read.table("./UCI HAR Dataset/train/y_train.txt") 
 names(trainingYSet) <- c("activity")
-trainingSet <- cbind(trainigYSet, trainingXSet)
+trainingSet <- cbind(trainingYSet, trainingXSet)
 
 testXSet <- read.table("./UCI HAR Dataset/test/X_test.txt")
 names(testXSet) <- colNames
